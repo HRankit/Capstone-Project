@@ -3,7 +3,6 @@ package com.udacity.quiztime.ui.list;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,11 +65,7 @@ public class TrendingFragment extends Fragment implements QuizListAdapter.Custom
         mRecyclerView.setAdapter(adapter);
 
         TrendingFragmentViewModel mMoviesViewModel = ViewModelProviders.of(this, new TrendingFragmentViewModelFactory(0)).get(TrendingFragmentViewModel.class);
-        mMoviesViewModel.getmQuizList().observe(this, movies -> {
-            Log.d("MA", String.valueOf(movies.size()));
-
-            adapter.submitList(movies);
-        });
+        mMoviesViewModel.getmQuizList().observe(this, movies -> adapter.submitList(movies));
     }
 
     @Override

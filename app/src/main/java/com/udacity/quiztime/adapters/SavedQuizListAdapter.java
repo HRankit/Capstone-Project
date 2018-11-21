@@ -1,7 +1,6 @@
 package com.udacity.quiztime.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +43,6 @@ public class SavedQuizListAdapter extends RecyclerView.Adapter<RecyclerView.View
         view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.quiz_list_single_item, parent, false);
 
-        Log.e("QLA", "Inflated layout.");
         return new MyViewHolder1(view);
 
 

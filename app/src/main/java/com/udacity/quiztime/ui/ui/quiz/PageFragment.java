@@ -1,7 +1,6 @@
 package com.udacity.quiztime.ui.ui.quiz;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -114,7 +113,6 @@ public class PageFragment extends Fragment {
             }
 
 
-            Log.d("PF", mySelectedIndex + " Index and correct is " + mAnswer);
 
             if (mySelectedIndex.equals(mAnswer)) {
 

@@ -26,7 +26,6 @@ import retrofit2.Response;
 
 public class DataRepository {
 
-    private static final String LOG_TAG = DataRepository.class.getSimpleName();
 
     // For Singleton instantiation
     private static final Object LOCK = new Object();
@@ -49,10 +48,8 @@ public class DataRepository {
         networkData.observeForever((QuizEntry[] quizData) -> mExecutors.diskIO().execute(new Runnable() {
             @Override
             public void run() {
-                Log.d(LOG_TAG, "Old weather deleted");
 
                 quizDao.bulkInsert(quizData);
-                Log.d(LOG_TAG, "New values inserted");
             }
         }));
     }
@@ -60,12 +57,10 @@ public class DataRepository {
     public synchronized static DataRepository getInstance(
             QuizDao quizDao, QuizListDao quizListDao, QuizDataSource weatherNetworkDataSource,
             AppExecutors executors) {
-        Log.d(LOG_TAG, "Getting the repository");
         if (sInstance == null) {
             synchronized (LOCK) {
                 sInstance = new DataRepository(quizDao, quizListDao, weatherNetworkDataSource,
                         executors);
-                Log.d(LOG_TAG, "Made new repository");
             }
         }
         return sInstance;

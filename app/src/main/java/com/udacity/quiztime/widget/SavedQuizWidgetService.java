@@ -36,6 +36,9 @@ public class SavedQuizWidgetService extends RemoteViewsService {
 }
 
 class SavedQuizWidgetViewFactory implements RemoteViewsService.RemoteViewsFactory {
+    private static final String MY_PREFS = "MyPrefs";
+    private static final String WIDGETDETAILS = "widgetdetails";
+    private static final String BY = " by ";
     private final List<WidgetItem> mWidgetItems = new ArrayList<>();
     private final Context mContext;
     private final List<String> mImages = new ArrayList<>();
@@ -52,16 +55,16 @@ class SavedQuizWidgetViewFactory implements RemoteViewsService.RemoteViewsFactor
         // or getViewAt(). Taking more than 20 seconds in this call will result in an ANR.
 
 
-        SharedPreferences sharedpreferences = mContext.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences sharedpreferences = mContext.getSharedPreferences(MY_PREFS, Context.MODE_PRIVATE);
         Gson gson = new Gson();
         java.lang.reflect.Type type = new TypeToken<List<QuizListEntry>>() {
         }.getType();
-        String json = sharedpreferences.getString("widgetdetails", null);
+        String json = sharedpreferences.getString(WIDGETDETAILS, null);
         if (!isEmpty(json)) {
             List<QuizListEntry> arrayList = gson.fromJson(json, type);
             mStepsCount = arrayList.size();
             for (int i = 0; i < mStepsCount; i++) {
-                mWidgetItems.add(new WidgetItem(arrayList.get(i).getTitle() + " by " + arrayList.get(i).getAuthor()));
+                mWidgetItems.add(new WidgetItem(arrayList.get(i).getTitle() + BY + arrayList.get(i).getAuthor()));
                 mImages.add(arrayList.get(i).getThumb());
             }
         }

@@ -20,7 +20,5 @@ public interface QuizListDao {
     void bulkInsert(QuizListEntry... quizListEntries);
 
 
-//    @Query("DELETE FROM list")
-//    void deleteOldWeather();
 
 }

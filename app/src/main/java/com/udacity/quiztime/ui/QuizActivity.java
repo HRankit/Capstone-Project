@@ -22,7 +22,7 @@ public class QuizActivity extends AppCompatActivity {
     public static final String QUIZ_ID = "quiz_id";
     private int CorrectScore = 0;
     private int WrongScore = 0;
-    private String CS = "CS";
+    private final String CS = "CS";
     private String WS = "WS";
     private boolean freezeScore = false;
 
@@ -59,10 +59,8 @@ public class QuizActivity extends AppCompatActivity {
                     Uri deepLink;
                     if (pendingDynamicLinkData != null) {
                         deepLink = pendingDynamicLinkData.getLink();
-                        Log.d("DEEPLINK", "This is the DeepLink" + deepLink);
 
-                        String quizID = deepLink.toString().replace("https://comsec.co.in/quiz/?t=", "");
-                        Log.d("DEEPLINK", "This is the Final QuizID" + quizID);
+                        String quizID = deepLink.toString().replace(getString(R.string.project_url), "");
 
                         showPageFragment(quizID);
                     }
@@ -99,7 +97,6 @@ public class QuizActivity extends AppCompatActivity {
                 fragment.changeTabColor(1);
             }
         }
-        Log.d("QUIZACT", "Correct added. Coorrect sxore is " + CorrectScore);
     }
 
     public void AddWrongScore() {
@@ -110,7 +107,6 @@ public class QuizActivity extends AppCompatActivity {
                 fragment.changeTabColor(2);
             }
         }
-        Log.d("QUIZACT", "rong added. rong sxore is " + WrongScore);
 
     }
 

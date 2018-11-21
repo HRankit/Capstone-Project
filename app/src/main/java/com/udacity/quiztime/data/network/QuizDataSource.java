@@ -17,7 +17,6 @@ package com.udacity.quiztime.data.network;
 
 
 import android.content.Context;
-import android.util.Log;
 
 import com.udacity.quiztime.data.database.QuizEntry;
 import com.udacity.quiztime.utils.AppExecutors;
@@ -30,8 +29,6 @@ import androidx.lifecycle.MutableLiveData;
  */
 public class QuizDataSource {
     // The number of days we want our API to return, set to 14 days or two weeks
-    public static final int NUM_DAYS = 14;
-    private static final String LOG_TAG = QuizDataSource.class.getSimpleName();
 
     // For Singleton instantiation
     private static final Object LOCK = new Object();
@@ -48,11 +45,9 @@ public class QuizDataSource {
      * Get the singleton for this class
      */
     public static QuizDataSource getInstance(Context context, AppExecutors executors) {
-        Log.d(LOG_TAG, "Getting the network data source");
         if (sInstance == null) {
             synchronized (LOCK) {
                 sInstance = new QuizDataSource(context.getApplicationContext(), executors);
-                Log.d(LOG_TAG, "Made new network data source");
             }
         }
         return sInstance;

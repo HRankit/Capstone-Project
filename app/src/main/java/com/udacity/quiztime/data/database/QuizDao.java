@@ -27,7 +27,5 @@ public interface QuizDao {
     @Query("DELETE FROM quiz WHERE quizid = :quizid")
     void deleteThisQuiz(String quizid);
 
-//    @Query("DELETE FROM quiz")
-//    void deleteOldWeather();
 
 }

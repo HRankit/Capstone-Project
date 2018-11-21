@@ -215,7 +215,7 @@ public class Main2Activity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("broadcastMessage");
-            Toast.makeText(Main2Activity.this, "You have been registered successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(Main2Activity.this, R.string.success_message, Toast.LENGTH_LONG).show();
         }
     }
 }

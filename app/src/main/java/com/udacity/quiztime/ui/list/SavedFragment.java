@@ -35,6 +35,8 @@ import static com.udacity.quiztime.ui.ui.quiz.QuizFragment.provideMainActivityVi
 public class SavedFragment extends Fragment implements SavedQuizListAdapter.SavedItemClickListener {
 
 
+    private static final String MY_PREFS = "MyPrefs";
+    private static final String WIDGETDETAILS = "widgetdetails";
     private View rootView;
     private RecyclerView mRecyclerView;
     private SavedQuizListAdapter.SavedItemClickListener listener;
@@ -80,13 +82,13 @@ public class SavedFragment extends Fragment implements SavedQuizListAdapter.Save
                 SavedQuizListAdapter adapter1 = new SavedQuizListAdapter(requireActivity(),
                         listener, QuizListEntry);
 
-                SharedPreferences sharedpreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences sharedpreferences = requireActivity().getSharedPreferences(MY_PREFS, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
 
                 Gson gson = new Gson();
                 String widgetData = gson.toJson(QuizListEntry);
 
-                editor.putString("widgetdetails", widgetData);
+                editor.putString(WIDGETDETAILS, widgetData);
                 editor.apply();
 
 

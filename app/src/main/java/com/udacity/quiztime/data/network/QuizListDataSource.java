@@ -17,7 +17,7 @@ import retrofit2.Response;
 
 
 class QuizListDataSource extends PageKeyedDataSource<Long, QuizList> {
-    private static final String TAG = "MoviesInTheaterDataSou";
+    private static final String TAG = "QuizListDataSource";
     private static final long DEFAULT_PAGE_NUMBER = 1;
     private final QuizApi quizWebService;
     private final MutableLiveData<NetworkState> networkState;
@@ -40,7 +40,6 @@ class QuizListDataSource extends PageKeyedDataSource<Long, QuizList> {
 
     @Override
     public void loadInitial(@NonNull PageKeyedDataSource.LoadInitialParams<Long> params, @NonNull final LoadInitialCallback<Long, QuizList> callback) {
-        Log.d(TAG, "loadInitial: ");
         initialLoading.postValue(NetworkState.LOADING);
         networkState.postValue(NetworkState.LOADING);
         call = quizWebService.fetchAllQuiz("", DEFAULT_PAGE_NUMBER);

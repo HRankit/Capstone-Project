@@ -16,7 +16,6 @@
         android:textSize="20sp" />
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/muli_semibold"

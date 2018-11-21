@@ -2,7 +2,6 @@ package com.udacity.quiztime.ui.ui.quiz;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +70,6 @@ public class ResultsFragment extends Fragment {
     private void setScore() {
         int CorrectScore = ((QuizActivity) requireActivity()).GetCorrectScore();
         int WrongScore = ((QuizActivity) requireActivity()).GetWrongScore();
-        Log.d("QUIZACT", "CS: " + CorrectScore + " WS:" + WrongScore);
         int FinalScore = CorrectScore + WrongScore;
         resultTextView.setText(String.format(Locale.getDefault(), "%d/%d", CorrectScore, FinalScore));
         resultTextView.setVisibility(View.VISIBLE);

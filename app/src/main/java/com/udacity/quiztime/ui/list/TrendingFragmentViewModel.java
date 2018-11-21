@@ -1,7 +1,6 @@
 package com.udacity.quiztime.ui.list;
 
 
-import android.util.Log;
 
 import com.udacity.quiztime.data.network.QuizDataSourceFactory;
 import com.udacity.quiztime.models.QuizList;
@@ -15,19 +14,13 @@ import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
 
 class TrendingFragmentViewModel extends ViewModel {
-    private static final String TAG = "TheaterViewModel";
     private final LiveData<PagedList<QuizList>> mQuizList;
 
 
     TrendingFragmentViewModel(int mParam) {
-        Log.d(TAG, "MoviesInTheaterViewModel: ");
         Executor executor = Executors.newFixedThreadPool(5);
         QuizDataSourceFactory factory = new QuizDataSourceFactory(executor, mParam);
 
-//        LiveData<NetworkState> networkStateLiveData = Transformations.switchMap(factory.getMutableLiveData(), source -> {
-//            Log.d(TAG, "apply: network change");
-//            return source.getNetworkState();
-//        });
 
         PagedList.Config pageConfig = (new PagedList.Config.Builder())
                 .setEnablePlaceholders(true)
@@ -44,7 +37,6 @@ class TrendingFragmentViewModel extends ViewModel {
 
 
     LiveData<PagedList<QuizList>> getmQuizList() {
-        Log.d(TAG, "getmQuizList: ");
         return mQuizList;
     }
 
