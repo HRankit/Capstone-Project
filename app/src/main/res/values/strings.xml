@@ -50,4 +50,11 @@
     <string name="create_a_quiz">Create a Quiz</string>
     <string name="project_url">https://comsec.co.in/quiz/?t=</string>
     <string name="success_message">You have been registered successfully</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+    <string name="opt_a">Option A</string>
+    <string name="opt_b">Option B</string>
+    <string name="opt_c">Option C</string>
+    <string name="opt_d">Option D</string>
+    <string name="title">Title</string>
 </resources>

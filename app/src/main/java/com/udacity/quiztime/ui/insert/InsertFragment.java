@@ -384,14 +384,14 @@ public class InsertFragment extends Fragment {
             questionStr = question.getEditText().getText().toString();
             returnValue++;
         } else {
-            showToast("Question");
+            showToast(getString(R.string.question));
         }
         if (answer.getSelectedItem().toString().trim().length() != 0) {
             ansStr = answer.getSelectedItem().toString();
             Log.d("INSERTFRAG", "The Answer is " + ansStr);
             returnValue++;
         } else {
-            showToast("Answer");
+            showToast(getString(R.string.answer));
         }
 
 
@@ -399,35 +399,35 @@ public class InsertFragment extends Fragment {
             o1Str = o1.getEditText().getText().toString();
             returnValue++;
         } else {
-            showToast("Option A");
+            showToast(getString(R.string.opt_a));
         }
 
         if (!isEmpty(o2.getEditText())) {
             o2Str = o2.getEditText().getText().toString();
             returnValue++;
         } else {
-            showToast("Option B");
+            showToast(getString(R.string.opt_b));
         }
 
         if (!isEmpty(o3.getEditText())) {
             o3Str = o3.getEditText().getText().toString();
             returnValue++;
         } else {
-            showToast("Option C");
+            showToast(getString(R.string.opt_c));
         }
 
         if (!isEmpty(o4.getEditText())) {
             o4Str = o4.getEditText().getText().toString();
             returnValue++;
         } else {
-            showToast("Option D");
+            showToast(getString(R.string.opt_d));
         }
         if (!isEmpty(quiz_title.getEditText())) {
             titleStr = quiz_title.getEditText().getText().toString();
-            Log.d("INSERTFRAG", "Thi si stitle " + titleStr);
+            Log.d("INSERTFRAG", "This is title " + titleStr);
             returnValue++;
         } else {
-            showToast("Title");
+            showToast(getString(R.string.title));
         }
 
 
