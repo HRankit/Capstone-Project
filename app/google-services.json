@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "851147747901",
+    "firebase_url": "https://quiztime-ddc4e.firebaseio.com",
+    "project_id": "quiztime-ddc4e",
+    "storage_bucket": "quiztime-ddc4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851147747901:android:01b99e834356567b",
+        "android_client_info": {
+          "package_name": "com.udacity.quiztime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851147747901-e3q36dijs9vfbkqkf0ieali17t55mal7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udacity.quiztime",
+            "certificate_hash": "e126d8909fb1a8f58a51a4821e09c39e5d2e8ecf"
+          }
+        },
+        {
+          "client_id": "851147747901-20e1st4g1qi8bddd05ug8j7f4s8m98ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAwQDcqK1W4afPQ5YXlYTPhBBvRuuwt8Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851147747901-20e1st4g1qi8bddd05ug8j7f4s8m98ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">QuizTime</string>
+    <string name="quiz_title">Quiz Title</string>
+    <string name="user_avatar">User Avatar</string>
+    <string name="author">Author</string>
+    <string name="_20">20</string>
+    <string name="trending_quizzes">Trending Quizzes</string>
+    <string name="saved_quizzes">Saved Quizzes</string>
+
+
+    <string name="hello_blank_fragment">4/5</string>
+    <string name="option_4">Option 4</string>
+    <string name="option_3">Option 3</string>
+    <string name="question_will_come_here">Question will come here:</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_1">Option 1</string>
+    <string name="progress_animation">progress animation</string>
+    <string name="title_of_quiz">Title of Quiz</string>
+    <string name="quiz_question">Quiz Question</string>
+    <string name="option_a">Option A</string>
+    <string name="option_b">Option B</string>
+    <string name="option_c">Option C</string>
+    <string name="option_d">Option D</string>
+    <string name="add_another">Add Another</string>
+    <string name="quiz_removed">Quiz question removed.</string>
+    <string name="undo">UNDO</string>
+    <string name="publish_in_progress">Publish in progress. Please wait....</string>
+    <string name="preview">PREVIEW</string>
+    <string name="share_message">Hey, I just published a quiz on this wonderful app QuizTime.\n
+                                See if you can solve the quiz.\n
+                                Click on the link below to attempt my quiz right away -\n</string>
+    <string name="share_title">Quiz Published!!</string>
+    <string name="share_subtitle">Share the quiz by clicking the Share button below.</string>
+    <string name="share_subject">I just created a quiz to test you.</string>
+    <string name="no_quiz_saved_yet">No Quiz Saved Yet.  Use the trending tab and try a quiz.</string>
+    <string name="results">Results</string>
+    <string name="you_scored">You Scored:</string>
+    <string name="publish">Publish</string>
+
+    <string-array name="ans_array">
+        <item> </item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+
+    </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="available_quizzes">Saved Quizzes</string>
+    <string name="select_correct_answer">Select Correct Answer</string>
+</resources>
